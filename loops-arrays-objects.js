@@ -9,6 +9,9 @@ const scores = [
     {name: 'Rianne', score: 66, grade: null}
 ];
 
+for ( i = 0 ; i < scores.length; ++i) {
+    console.log(scores[i].score)
+}
 // Verwachtte uitkomsten:
 // 83
 // 77
@@ -26,6 +29,22 @@ const scores = [
 // < 60 = F, < 70 = D, <80 = C, <90 B, <100 = A
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
 // Verwachtte uitkomsten:
+for (let i = 0; i < scores.length; i++) {
+    let grade;
+    if (scores[i].score < 60) {
+        grade = 'F';
+    } else if (scores[i].score < 70) {
+        grade = 'D';
+    } else if (scores[i].score < 80) {
+        grade = 'C';
+    } else if (scores[i].score < 90) {
+        grade = 'B';
+    } else {
+        grade = 'A';
+    }
+    console.log(`${scores[i].name}: ${grade}`);
+}
+
 // B
 // C
 // A
@@ -48,7 +67,25 @@ const scores = [
 //  { name: 'Rianne', score: 66, grade: 'D' }
 //  ];
 // ==========================================
+for (i = 0 ; i < scores.length ; ++i) {
 
+    for (let i = 0; i < scores.length; i++) {
+        let grade;
+        if (scores[i].score < 60) {
+            grade = 'F';
+        } else if (scores[i].score < 70) {
+            grade = 'D';
+        } else if (scores[i].score < 80) {
+            grade = 'C';
+        } else if (scores[i].score < 90) {
+            grade = 'B';
+        } else {
+            grade = 'A';
+        }
+        scores[i].grade = grade
+    }
+    console.log(scores[i])
+}
 
 
 
@@ -75,14 +112,23 @@ const NOVIEmployees = [
 //  ];
 // ==========================================
 
+for ( i = 0 ; i < NOVIEmployees.length ; ++i) {
+    NOVIEmployees[i].email = NOVIEmployees[i].firstName + '.' + NOVIEmployees[i].lastName + '@novi.nl'
 
-
+}
+console.log(NOVIEmployees)
 
 
 
 // Opdracht 2-BONUS
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
 // ==========================================
+for ( i = 0 ; i < NOVIEmployees.length ; ++i) {
+    NOVIEmployees[i].email = NOVIEmployees[i].email.toLowerCase()
+    console.log(NOVIEmployees[i])
+}
+
+
 
 
 
@@ -113,6 +159,33 @@ const students = [
     {name: 'Aicha', city: 'Utrecht', zipCode: '3514', neighborhood: null},
     {name: 'Karima', city: 'Utrecht', zipCode: '3531', neighborhood: null},
 ];
+
+for( i = 0; i < students.length ; ++i){
+    if(students[i].zipCode === '3513') {
+students[i].neighborhood = "Pijlsweerd"
+    }
+    if(students[i].zipCode === '3514') {
+students[i].neighborhood = "Vogelenbuurt"
+    }
+    if(students[i].zipCode === '3512') {
+students[i].neighborhood = "Binnenstad"
+    }
+    if(students[i].zipCode === '3531') {
+students[i].neighborhood = "Lombok"
+    }
+    if(students[i].zipCode === '3572') {
+students[i].neighborhood = "Wittevrouwen"
+    }
+    if(students[i].zipCode === '3581') {
+students[i].neighborhood = "Oudwijk"
+    }
+    if(students[i].zipCode === '3583') {
+students[i].neighborhood = "Schildersbuurt"
+    }
+
+   console.log(students[i]) 
+}
+
 
 // Verwachte uitkomsten:
 // [
