@@ -7,9 +7,7 @@
 const names = ["Henk", "Piet", "Fred", "Joop"];
 
 // Verwachtte uitkomsten:
-for(i = 0; i < names.length ; i++) {
-    console.log(`${names[i]}je `)
-}
+
 // Vóór het script zie je de originele waardes:
 // console.log(names) geeft: ["Henk", "Piet", "Fred", "Joop"]
 // Na jouw script zie je de aangepaste waardes:
@@ -32,18 +30,6 @@ const numbers = [2, 4, 5, 29, 38];
 // console.log(numbers) geeft: [2, 4, 5, 29, 38];
 // Na jouw script zie je de aangepaste waardes:
 // console.log(numbers) geeft: [ 4, 8, 15, 87, 76 ];
-console.log("Original array:", numbers);
-
-for (let i = 0; i < numbers.length; i++) {
-    if (numbers[i] === 2 || numbers[i] === 4 || numbers[i] === 38) {
-        numbers[i] *= 2;
-    } else if (numbers[i] === 5 || numbers[i] === 29) {
-        numbers[i] *= 3;
-    }
-}
-
-console.log("Modified array:", numbers);
-
 
 
 
@@ -57,9 +43,7 @@ console.log("Modified array:", numbers);
 
 const squares = [30, 2, 8, 24, 11];
 
-for (i = 0; i < squares.length; ++i) {
-    console.log(`Het volume van ${squares[i]} is ${squares[i] * squares[i] * squares[i]}` )
-}
+
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
 // console.log(squares) geeft: [30, 2, 8, 24, 11];
